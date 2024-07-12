@@ -1,7 +1,9 @@
 name: Update Cloudflare DNS
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'  # 每隔三十分钟运行一次
+  workflow_dispatch:  # 手动触发
 
 jobs:
   update-dns:
@@ -9,15 +11,12 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        node-version: '20'
+      uses: actions/checkout@v4
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
-        node-version: '20'
+        python-version: '3.x'  # 你可以指定需要的 Python 版本
 
     - name: Install dependencies
       run: |
