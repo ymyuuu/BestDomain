@@ -13,4 +13,4 @@
    - 参考 GitHub 文档：[Creating and storing encrypted secrets](https://docs.github.com/zh/actions/security-guides/using-secrets-in-github-actions)
 
 3. 配置 GitHub Actions 定时任务
-   - 编辑 [`.github/workflows/main.yml`](.github/workflows/main.yml) 文件，设置 `cron` 表达式以定义任务运行时间
+   - 编辑 [.github/workflows/main.yml](.github/workflows/main.yml) 文件，设置 `cron` 表达式以定义任务运行时间
