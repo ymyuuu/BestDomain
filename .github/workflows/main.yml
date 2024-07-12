@@ -25,4 +25,4 @@ jobs:
       env:
         CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
       run: |
-        python your_script.py
+        python bestdomain.py
