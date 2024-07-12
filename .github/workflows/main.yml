@@ -10,11 +10,14 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        node-version: '20'
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'  # 你可以指定需要的 Python 版本
+        python-version: '3.x'
+        node-version: '20'
 
     - name: Install dependencies
       run: |
